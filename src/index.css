@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Unbounded:wght@200..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+    --color-black: #202020;
+    --color-main-bg: #a2d2ff;
+    --color-white: #f7f7f7;
+    --color-purple: #cdb4db;
+    --color-pink: #ffc8dd;
+    --color-blue-baby: #bde0fe;
+    --color-icy-blue: #bde0fe;
+    --color-pastel: #ffafcc;
+    --font-syne: "Syne", sans-serif;
+    --font-unbounded: "Unbounded", sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #faeade;
+    color: #523122;
+    font-family: "Unbounded", sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
