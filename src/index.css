@@ -40,3 +40,99 @@ body::-webkit-scrollbar {
         transform: rotate(360deg);
     }
 }
+
+@layer utilities {
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+    .col-center {
+        @apply flex flex-col justify-center items-center;
+    }
+    .abs-center {
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+    .general-title {
+        @apply 2xl:text-[8.5rem] md:text-8xl text-5xl font-bold uppercase leading-[9vw] tracking-[-.35vw];
+    }
+}
+
+@layer components {
+    .message-content {
+        @apply bg-pink text-black min-h-dvh overflow-hidden flex justify-center items-center relative z-20;
+
+        .msg-wrapper {
+            @apply 2xl:text-[8.5rem] md:text-8xl text-5xl font-bold uppercase leading-[9vw] tracking-[-.35vw] flex flex-col justify-center items-center md:gap-24 gap-14;
+
+            h1:first-of-type {
+                @apply 2xl:max-w-4xl md:max-w-2xl max-w-xs text-center  text-purple;
+            }
+
+            h1:last-of-type {
+                @apply 2xl:max-w-7xl md:max-w-4xl max-w-xs text-center  text-[#faeade10];
+            }
+        }
+
+        p {
+            @apply text-center;
+        }
+
+        h1,
+        h2 {
+            @apply leading-none;
+        }
+
+        .msg-text-scroll {
+            @apply rotate-[3deg] 2xl:translate-y-5 -translate-y-5 absolute z-10 border-[.5vw] border-[#7f3b2d];
+        }
+    }
+
+    .flavor-section {
+        @apply min-h-dvh bg-white overflow-hidden relative;
+
+        .flavor-text-scroll {
+            @apply rotate-[-3deg] md:-translate-y-8 border-[.5vw] border-pink z-10;
+        }
+
+        .first-text-split h1 {
+            @apply md:text-center text-black;
+        }
+
+        .second-text-split h1 {
+            @apply md:text-center text-black;
+        }
+
+        .slider-wrapper {
+            @apply lg:h-dvh min-h-dvh md:min-h-fit w-full mt-0 md:mt-20 xl:mt-0;
+
+            .flavors {
+                @apply h-full w-full flex md:flex-row flex-col items-center 2xl:gap-72 lg:gap-52 md:gap-24 gap-7 flex-nowrap;
+
+                h1 {
+                    @apply absolute md:bottom-6 md:left-6 bottom-4 left-4 text-white md:text-3xl text-xl font-semibold uppercase tracking-tighter drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)];
+                }
+            }
+        }
+    }
+
+    .foot-section {
+        @apply min-h-dvh bg-pastel text-black overflow-hidden flex justify-center items-center relative px-6;
+
+        .foot-wrapper {
+            @apply max-w-4xl text-center bg-white rounded-[2rem] border-[.5vw] border-purple -rotate-2 shadow-2xl px-8 py-14 md:px-16 md:py-20;
+            perspective: 1200px;
+        }
+
+        .foot-text {
+            @apply font-syne font-bold uppercase text-2xl md:text-4xl 2xl:text-5xl leading-tight tracking-tight;
+        }
+
+        .foot-line {
+            display: inline-block;
+            transform-style: preserve-3d;
+        }
+
+        .foot-signature {
+            @apply font-unbounded normal-case text-sm md:text-base block mt-10 tracking-wide text-[#7f3b2d];
+        }
+    }
+}
