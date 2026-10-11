@@ -26,8 +26,8 @@ const FootSection = () => {
                         ease: "power2.out",
                         scrollTrigger: {
                             trigger: line,
-                            start: "top 90%",
-                            end: "top 50%",
+                            start: "top 95%",
+                            end: "top 65%",
                             scrub: true,
                         },
                     },
